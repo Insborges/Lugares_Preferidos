@@ -1,16 +1,25 @@
 # favourite_places
 
-A new Flutter project.
+# Favourite Places App em Flutter
 
-## Getting Started
+**Favourite Places App** é uma aplicação desenvolvida em Flutter que ajuda o utilizador a guardar os lugares preferidos dele. Conseguinto guardar na hora e tirar foto à paisagem.
+## 🛠️ Construído com
+     - Flutter - Framework para desenvolvimento de aplicativos multiplataforma.
+     - Dart - Linguagem de programação utilizada pelo Flutter.
+     - Visual Studio Code - Editor de código com suporte a Flutter através de extensões.
+     - API Maps - Chave para conseguir utilizar o google maps
+     - Firebase - Vais guardar todos os locais guardados na app
 
-This project is a starting point for a Flutter application.
+## 📌 Funcionalidades
+     - Tirar fotos: Dá para o utilizador tirar fotos do local que gostou.
+     - Pin no Maps: Dá para o utilizador guardar a localização exata em que está ou depois procurar no maps o local.
+     - Registo das viagens: O nome fala por si.
+     - Interface Intuitiva: Design moderno e fácil de usar, com navegação fluida.
 
-A few resources to get you started if this is your first Flutter project:
+## ✒️ Autores
+Inês Borges - Desenvolvedora - Insborges |
+Maximilian Schwarzmüller - Instrutor 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🎁 Agradecimentos
+    Agradeço ao curso de Flutter que serviu como base para este projeto.
+    Um agradecimento especial à comunidade Flutter por fornecer recursos e suporte incríveis.
