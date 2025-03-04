@@ -7,7 +7,6 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
   UserPlacesNotifier() : super(const []);
 
   void addPlace(String title, File image, PlaceLocation location) {
-    final 
 
     final newPlace = Place(
       title: title,
