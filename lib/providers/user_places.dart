@@ -31,17 +31,19 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
   Future<void> loadPlaces() async {
     final db = await _getDatabase();
     final data = await db.query('user_places');
-    final places = data.map(
-      (row) => Place(
-        id: row['id'] as String ,
-        title: row['title'] as String,
-        image: File(row['image'] as String),
-        location: PlaceLocation(
-            latitute: row['lat'] as double,
-            longitude: row['lng'] as double,
-            address: row['address'] as String),
-      ),
-    ).toList();
+    final places = data
+        .map(
+          (row) => Place(
+            id: row['id'] as String,
+            title: row['title'] as String,
+            image: File(row['image'] as String),
+            location: PlaceLocation(
+                latitute: row['lat'] as double,
+                longitude: row['lng'] as double,
+                address: row['address'] as String),
+          ),
+        )
+        .toList();
 
     state = places;
   }
@@ -49,7 +51,7 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
   void addPlace(String title, File image, PlaceLocation location) async {
     final appDir = await syspaths.getApplicationCacheDirectory();
     final filename = path.basename(image.path);
-    image.copy('${appDir.path} /$filename');
+    image.copy('${appDir.path}/$filename');
     final copiedImage = await image.copy('${appDir.path}/$filename');
 
     final newPlace = Place(
@@ -63,7 +65,7 @@ class UserPlacesNotifier extends StateNotifier<List<Place>> {
     db.insert('user_places', {
       'id': newPlace.id,
       'title': newPlace.title,
-      'image': newPlace.image,
+      'image': newPlace.image.path,
       'lat': newPlace.location.latitute,
       'lng': newPlace.location.longitude,
       'address': newPlace.location.address,
