@@ -10,7 +10,7 @@ class PlacesDetailScreen extends StatelessWidget {
   String get locationImage {
     final lat = place.location.latitute;
     final lng = place.location.longitude;
-    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=AIzaSyCkBLAN97-GdZCrlf5ZEWjnd_4an2nFvn0';
+    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng&zoom=16&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C$lat,$lng&key=/*{AQUI É A CHAVE DA API MAPA DO GOOGLE CLOUD}*/';
   }
 
   @override
