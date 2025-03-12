@@ -8,7 +8,7 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
          <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyCkBLAN97-GdZCrlf5ZEWjnd_4an2nFvn0"/>
+               android:value="/*{AQUI É A CHAVE DA API MAPA DO GOOGLE CLOUD}*/"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
